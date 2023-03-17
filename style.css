@@ -1,0 +1,80 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --primairy-color: grey;
+    --accent-color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "top top"
+        "left right";
+
+    height: 100vh;
+}
+
+main {
+    grid-area: left;
+    overflow-y: scroll;
+}
+
+nav {
+    grid-area: right;
+    border-left: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+
+nav a {
+    padding: 10px;
+    background-color: grey;
+    color: black;
+}
+
+nav a:hover {
+    background-color: rgb(206, 206, 206);
+}
+
+
+header {
+    border-bottom: 1px solid black;
+    grid-area: top;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+section.text {
+    padding: 5px;
+    margin: 20px;
+    border: 1px solid black;
+}
+
+section.image_galery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+section.image_galery img {
+    width: 90%;
+    
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
